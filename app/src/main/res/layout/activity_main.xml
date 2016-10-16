@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@android:color/white">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_100"
+        android:background="#ffffff"
+        android:fitsSystemWindows="false"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/colllapse"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/colorAccent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_10"
+                android:gravity="center"
+                app:layout_collapseMode="parallax">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_3">
+
+                    <TextView
+                        android:id="@+id/subject"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toLeftOf="@+id/star"
+                        android:text="David Hume jhjsd jsdhfjsd jsdhfj jsdhfjs sjdhfjs sjdfhjsd dfhjsd"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_16"
+                        android:textStyle="bold"
+                        android:maxLines="2"
+                        android:ellipsize="end"/>
+
+                    <ImageView
+                        android:id="@+id/star"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:src="@drawable/star" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/participants"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/ts"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="Hirist.co and me"
+                    android:textColor="@color/preview_text"
+                    android:textSize="@dimen/text_13" />
+
+
+
+            </LinearLayout>
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_2"
+            android:background="@android:color/darker_gray"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_10"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/profile"
+                android:layout_width="@dimen/margin_45"
+                android:layout_height="@dimen/margin_45"
+                android:layout_marginRight="@dimen/margin_10"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/margin_10">
+                <TextView
+                    android:id="@+id/participant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_marginBottom="@dimen/margin_3"
+                    android:text="Hirist.com"
+                    android:textSize="@dimen/margin_16"
+                    android:textColor="@android:color/black"
+                    />
+
+
+                <TextView
+                    android:id="@+id/ts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/ts"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="Hirist.co and me"
+                    android:textColor="@color/preview_text"
+                    android:textSize="@dimen/text_13" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:padding="@dimen/margin_10"
+                android:id="@+id/message_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/margin_16"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas egestas leo sit amet justo vehicula tincidunt. Nullam a ipsum vitae ipsum feugiat sodales gravida quis nibh. Integer sed condimentum mauris. Maecenas venenatis purus quis nisl consequat, ac iaculis mi congue. Nunc ac turpis vel sapien maximus iaculis. Nunc in mollis lectus. Cras sem nisi, auctor eu malesuada consectetur, bibendum et tortor. Ut interdum nisl sed magna ullamcorper, ut pulvinar ligula luctus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.Etiam in tempor est. Praesent egestas rutrum ex sed ornare. Duis mi neque, vehicula et vehicula ut, convallis nec felis. Morbi mattis vitae massa sed rhoncus. Integer pulvinar tincidunt eros. Etiam ornare metus ac viverra placerat. Integer vel nunc et quam varius accumsan at in nibh. Fusce at luctus odio, vitae dictum mauris. Nulla facilisi. Cras non lorem porta, porta neque quis, ornare urna. Proin eleifend pretium neque id vestibulum. Ut condimentum mauris nec ipsum mollis molestie. Vivamus at erat lorem. In odio dui, molestie a accumsan sit amet, semper sed arcu. Sed ornare sed justo a ultrices. Fusce non consectetur lacus." />
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
